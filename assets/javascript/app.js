@@ -37,7 +37,7 @@ $(document).ready(function() {
   var correctAnswers = 0;
   var incorrectAnswers = 0;
   var unanswered = 0;
-  var countdown = 20;
+  var countdown = 120;
   var timer;
 
   // once player clicks 'start', start the game.
@@ -97,7 +97,7 @@ $(document).ready(function() {
 
     // HOW TO MAKE THIS MORE DRY??
     //console.log(Q1, Q2, Q3, Q4, Q5, Q6);
-    
+
     // compare that with the actual answer
     // if not answered, unanswered count +1
     if (Q1 === undefined) {
