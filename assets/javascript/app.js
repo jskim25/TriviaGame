@@ -46,7 +46,7 @@ $(document).ready(function() {
   });
 
   function startGame() {
-    // make the start game button disappear and have questions appear
+    // make the start game button disappear
     $("#start").remove();
     // set interval of timer to 1000 milliseconds
     timer = setInterval(decrement, 1000);
@@ -96,8 +96,8 @@ $(document).ready(function() {
     var Q6 = $('input:radio[name="question-5"]:checked').val();
 
     // HOW TO MAKE THIS MORE DRY??
-
-    console.log(Q1, Q2, Q3, Q4, Q5, Q6);
+    //console.log(Q1, Q2, Q3, Q4, Q5, Q6);
+    
     // compare that with the actual answer
     // if not answered, unanswered count +1
     if (Q1 === undefined) {
@@ -161,7 +161,6 @@ $(document).ready(function() {
     else {
       incorrectAnswers++;
     }
-    
     // once the results have been analyzed, show the results onto the page
     showResults();
   };
@@ -169,7 +168,7 @@ $(document).ready(function() {
   function showResults() {
     // clear the timer
     clearInterval(timer);
-    // hide it from the page
+    // remove it from the page
     $("#show-counter").remove();
     // also hide the questions/choices
     $("#contents").remove();
@@ -177,8 +176,6 @@ $(document).ready(function() {
     $("#results").append("<h3>Correct Answers: " + correctAnswers + "</h3>");
     $("#results").append("<h3>Incorrect Answers: " + incorrectAnswers + "</h3>");
     $("#results").append("<h3>Unanswered: " + unanswered + "</h3>");
-    // allow player to restart the game
-    $("#results").append("<br><button id='restart'>Restart</button>");
   };
 
   $(document).on("click", "#restart", function() {
