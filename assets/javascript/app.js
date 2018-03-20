@@ -81,7 +81,7 @@ $(document).ready(function() {
     $("#show-counter").html("<h2> Time Remaining: " + countdown + " Seconds</h2>");
     // when the counter reaches zero, analyze the results
     if (countdown === 0) {
-      console.log("time's up");
+      // console.log("time's up");
       analyzeResults();
     }
   };
