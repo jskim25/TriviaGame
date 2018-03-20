@@ -177,9 +177,5 @@ $(document).ready(function() {
     $("#results").append("<h3>Incorrect Answers: " + incorrectAnswers + "</h3>");
     $("#results").append("<h3>Unanswered: " + unanswered + "</h3>");
   };
-
-  $(document).on("click", "#restart", function() {
-    startGame();
-  });
   
 });
